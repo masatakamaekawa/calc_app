@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('calcs');
 });
-Route::get('/language', [App\Http\Controllers\LanguageController::class, 'index']);
+
+Route::get('/calcs/{num1}/{operator}/{num2}', [App\Http\Controllers\CalcsController::class, 'index']);
