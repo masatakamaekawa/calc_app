@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('calcs');
+    return view('welcome');
 });
 
 Route::get('/calcs/{num1}/{operator}/{num2}', [App\Http\Controllers\CalcsController::class, 'index']);
